@@ -37,6 +37,7 @@ int noteDurations[] = {
 };
 
 void setup() {
+    pinMode(buzzerPin, OUTPUT);
   for (int thisNote = 0; thisNote < sizeof(melody) / 2; thisNote++) {
     int noteDuration = 2000 / noteDurations[thisNote];
     tone(buzzerPin, melody[thisNote], noteDuration);
